@@ -14,7 +14,9 @@ RUN \
 RUN pip install poetry
 RUN poetry install
 
-RUN poetry add flask flask-jsonpify flask-sqlalchemy flask-restful flask-cors flask-migrate pytest psycopg2
+# Commands to run after building the image for the first time
+
+# RUN poetry add flask flask-jsonpify flask-sqlalchemy flask-restful flask-cors flask-migrate pytest psycopg2
 # RUN poetry run flask --app=main.py db init
 # RUN poetry run flask --app=main.py db migrate
 

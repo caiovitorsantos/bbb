@@ -39,11 +39,19 @@ Para instalar e configurar o projeto é necessário que tenha instalado na maqui
 Com a aplicação rodando no endereço `http://localhost:5005`, os seguintes endpoints estão disponiveis:
 
 GET /subscribers -> Listagem dos inscritos
+[Index Success](/bbb/test_evidence/index_success.png)
 
 POST /subscribers -> Cadastro de inscritos
+[Create Success](/bbb/test_evidence/create_success.png)
+[Create Falure](/bbb/test_evidence/create_failure.png)
 
 GET /subscribers/:subscriber_id -> Detalhes do participante
+[Show Success](/bbb/test_evidence/show_success.png)
+[Show Not Found](/bbb/test_evidence/show_not_found.png)
 
 PUT /subscribers/:subscriber_id -> Edição do inscrito
+[Update Success](/bbb/test_evidence/update_success.png)
 
 DELETE /subscribers/:subscriber_id -> Exclusão do inscrito
+[Delete Success](/bbb/test_evidence/delete_success.png)
+

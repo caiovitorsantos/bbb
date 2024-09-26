@@ -3,8 +3,7 @@ from src.adapters.db_adapter import DbAdapter
 import json
 
 class SubscriberRepository:
-    def __init__(self):
-        db_adapter = DbAdapter()
+    def __init__(self, db_adapter=DbAdapter()):
         db_adapter.create_connection()
         self.db = db_adapter
     
@@ -41,6 +40,7 @@ class SubscriberRepository:
         query = "UPDATE subscribers SET name = %s, email = %s, youtube_url = %s WHERE subscriber_id = %s"
         params = (subscriber_data['name'], subscriber_data['email'], subscriber_data['youtube_url'], subscriber_id)
         subscriber = self.db.execute_command(query, params)
+
         return subscriber
     
     def delete(self, subscriber_id):

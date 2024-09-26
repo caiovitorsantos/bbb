@@ -6,7 +6,7 @@ import logging
 class DbAdapter:
     logging.basicConfig(level=logging.INFO)
 
-    def __init__(self, db_url='postgresql://postgres:password@db:5432/bbb'):
+    def __init__(self, db_url="postgresql://postgres:password@db:5432/bbb"):
         self.db_url = db_url
         self.conn = None
 

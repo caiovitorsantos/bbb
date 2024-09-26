@@ -29,3 +29,9 @@ class Subscriber(db.Model):
             'email': self.email,
             'youtube_url': self.youtube_url
         }
+
+    @classmethod
+    def from_dict(self, data):
+        for field in ['subscriber_id', 'name', 'email', 'youtube_url']:
+            if field in data:
+                setattr(self, field, data[field])
